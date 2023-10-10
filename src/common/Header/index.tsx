@@ -55,7 +55,7 @@ function Header() {
   }, [])
 
   return (
-    <AppBar position="static" className="bg-black elementShadow sticky top-0">
+    <AppBar position="static" className="bg-black element-shadow sticky top-0">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
