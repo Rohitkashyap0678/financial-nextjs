@@ -16,12 +16,21 @@ import CustomButton from '../Custom/CustomButton'
 
 const pages = ['TOKEN', 'SERVICES', '$TOKEN', 'DEVELOPMENT SERVICES', 'DOCS']
 
+const subItemsTools = [
+  'Buy On BSC',
+  'Buy on CSC',
+  'Website',
+  'Dashboard',
+  'Whitepaper',
+]
+
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
+  const dropdownRef = useRef<HTMLDivElement | null>(null)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isFilterDropdownOpen, setIsFilterDropdownOpen] = React.useState(false)
 
-  const dropdownRef = useRef(null) // Create a ref for the dropdown menus
+  // const dropdownRef = useRef(null) // Create a ref for the dropdown menus
 
   const handleOpenNavMenu = (event?: any) => {
     setAnchorElNav(event.currentTarget)
@@ -39,8 +48,11 @@ function Header() {
 
   useEffect(() => {
     // Add an event listener to the document to handle clicks outside the dropdown menus
-    function handleClickOutside(event: any) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         // Clicked outside the dropdown menus
         setIsMenuOpen(false)
         setIsFilterDropdownOpen(false)
@@ -144,7 +156,7 @@ function Header() {
                   className="top-[72px] left-[280px] z-20 absolute"
                   ref={dropdownRef}
                 >
-                  <FilterDropdown />{' '}
+                  <FilterDropdown subItemsTools={subItemsTools} />{' '}
                 </Box>
               )}
 

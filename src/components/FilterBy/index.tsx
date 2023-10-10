@@ -10,9 +10,18 @@ import Container from '@mui/material/Container'
 import Switch from '@mui/material/Switch'
 import * as React from 'react'
 import GrayButton from '../../common/Custom/CustomButton/GrayButton'
+// import { FilterDropdown } from '../../common'
 
 function FilterBy() {
   const [checked, setChecked] = React.useState<boolean>(true)
+
+  // const subItemsTools = [
+  //   'Buy On BSC',
+  //   'Buy on CSC',
+  //   'Website',
+  //   'Dashboard',
+  //   'Whitepaper',
+  // ]
 
   return (
     <Container maxWidth="xl">
@@ -46,7 +55,7 @@ function FilterBy() {
                 <Typography noWrap variant="subtitle2" color="white">
                   <Switch
                     checked={checked}
-                    onChange={(event) => setChecked(event.target.checked)}
+                    onChange={(event: any) => setChecked(event.target.checked)}
                   />
                   Staked only
                 </Typography>
@@ -58,6 +67,7 @@ function FilterBy() {
                 </Typography>
                 <Box sx={{ width: '170px' }}>
                   <GrayButton name="filter" />
+                  {/* <FilterDropdown className='absolute' subItemsTools={subItemsTools} /> */}
                 </Box>
               </TableCell>
               <TableCell>
