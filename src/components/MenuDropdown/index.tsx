@@ -4,6 +4,7 @@ import List from '@mui/material/List'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import Typography from '@mui/material/Typography'
+import Link from 'next/link'
 
 const MenuDropdown = () => {
   const subItems = [
@@ -26,14 +27,14 @@ const MenuDropdown = () => {
   ]
 
   return (
-    <div className="bg-black  min-w-[300px]">
+    <div className="bg-black  min-w-[300px] relative !z-50 ">
       <Box className="border-spacing-1 border-white  rounded-2xl border-2 opacity-90">
         <Box className="flex gap-2 items-center px-3 py-2 border-b">
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             className="md:mr-2 mr-0 flex bg-white rounded-full md:w-8 md:h-8 h-4 w-4"
           ></Typography>
           Homepage
@@ -44,16 +45,18 @@ const MenuDropdown = () => {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             className="mr-2 flex bg-white rounded-full relative top-3 md:w-10 md:h-8 h-4 w-4"
           ></Typography>
 
           <Box sx={{ width: '100%' }}>
             <List component="nav" aria-label="secondary mailbox folder">
               {subItems.map((item, index) => (
-                <ListItemButton key={index} className="!p-0">
-                  <ListItemText primary={item} />
-                </ListItemButton>
+                <Link key={index} href={item === 'Yield Farms' ? '/farm' : '#'}>
+                  <ListItemButton className="!p-0">
+                    <ListItemText primary={item} />
+                  </ListItemButton>
+                </Link>
               ))}
             </List>
           </Box>
@@ -64,7 +67,7 @@ const MenuDropdown = () => {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             className="mr-2 flex bg-white rounded-full relative top-3 md:w-10 md:h-8 h-4 w-4"
           ></Typography>
 
@@ -84,7 +87,7 @@ const MenuDropdown = () => {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             className="md:mr-2 mr-0 flex bg-white rounded-full md:w-8 md:h-8 h-4 w-4"
           ></Typography>
           Audits
