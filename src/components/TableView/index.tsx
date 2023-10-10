@@ -4,8 +4,6 @@ import { Typography, Box } from '@mui/material'
 const data = [
   {
     id: 1,
-    primaryColor: '--primary-color',
-    secondaryColor: '--secondary-color',
     text1: '#1',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -13,8 +11,6 @@ const data = [
   },
   {
     id: 2,
-    primaryColor: '--primary-color',
-    secondaryColor: '--primary-color',
     text1: '#2',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -22,8 +18,6 @@ const data = [
   },
   {
     id: 3,
-    primaryColor: '--primary-color',
-    secondaryColor: '--secondary-color',
     text1: '#3',
     text2: 'CAKE/BNB',
     text3: '$0.0034987',
@@ -31,8 +25,6 @@ const data = [
   },
   {
     id: 4,
-    primaryColor: '--primary-color',
-    secondaryColor: '--primary-color',
     text1: '#4',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
