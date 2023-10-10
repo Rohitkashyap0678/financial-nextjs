@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
-import styles from './index.module.scss'
+// import CustomButton from '../Custom/CustomButton/index'
 
 const pages = ['TOKEN', 'SERVICES', 'DEVELOPMENT SERVICES', 'DOCS']
 
@@ -25,7 +25,7 @@ function Header() {
   }
 
   return (
-    <AppBar position="static" className="bg-black elementShadow">
+    <AppBar position="static" className="bg-black ">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -114,11 +114,7 @@ function Header() {
             </Box>
 
             <Box className="gap-10 items-center">
-              <Button
-                className={`rounded-[30px] text-white w-24 h-[35px] capitalize ${styles.linearGradient}`}
-              >
-                Connect
-              </Button>
+              {/* <CustomButton name={'conect'} /> */}
             </Box>
           </Box>
         </Toolbar>
