@@ -17,6 +17,12 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogActions-root': {
     padding: theme.spacing(1),
   },
+  '& .MuiPaper-root': {
+    borderRadius: '20px !important',
+    color: 'white !important',
+    border: '2px solid #48494d !important',
+    background: '#151618 !important',
+  },
 }))
 
 const AprCalculatorPopup = ({ open, handleClose }) => {

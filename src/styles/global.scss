@@ -34,33 +34,3 @@ body {
 .linear-gradient {
   background: linear-gradient(270deg, #00f902 -16.36%, rgb(99 250 6 / 0%) 190%);
 }
-
-.ellipse-one {
-  width: 28px;
-  height: 28px;
-  border: 1px solid #00f904;
-  border-radius: 100%;
-  background: #00f904;
-}
-
-.ellipse-two {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  margin-top: -18px;
-  margin-left: 4px;
-  border: 1px solid #d9d9d9;
-  border-radius: 100%;
-  background: #d9d9d9;
-}
-
-// .arp-popup-diolog {
-//   .MuiDialog-container {
-//     .MuiPaper-root {
-//       border-radius: 20px !important;
-//       color: white !important;
-//       border: 2px solid #48494d !important;
-//       background: #151618 !important;
-//     }
-//   }
-// }

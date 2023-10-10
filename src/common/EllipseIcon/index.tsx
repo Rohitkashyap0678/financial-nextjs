@@ -1,15 +1,10 @@
 import Box from '@mui/material/Box'
 
 export default function EllipseIcon() {
-  // Define an array of classes for the ellipses
-  const ellipseClasses = ['ellipse-one', 'ellipse-two']
-
   return (
     <Box>
-      {/* Use the map function to create ellipse elements */}
-      {ellipseClasses.map((className, index) => (
-        <Box key={index} className={className}></Box>
-      ))}
+      <div className="w-7 h-7 border-2 border-green-500 rounded-full bg-green-500"></div>
+      <div className="flex-shrink-0 w-10 h-10 mt-[-18px] ml-1 border-2 border-gray-300 rounded-full bg-gray-300"></div>
     </Box>
   )
 }
