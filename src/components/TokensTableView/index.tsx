@@ -6,8 +6,8 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 const data = [
   {
     id: 1,
-    primaryColor: '--primary-color',
-    secondaryColor: '--secondary-color',
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#ca0000', // Secondary color
     text1: '#1',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -15,8 +15,8 @@ const data = [
   },
   {
     id: 2,
-    primaryColor: '--primary-color',
-    secondaryColor: '--primary-color',
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#00f904', // Primary color
     text1: '#2',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -24,8 +24,8 @@ const data = [
   },
   {
     id: 3,
-    primaryColor: '--primary-color',
-    secondaryColor: '--secondary-color',
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#ca0000', // Secondary color
     text1: '#3',
     text2: 'CAKE/BNB',
     text3: '$0.0034987',
@@ -33,8 +33,8 @@ const data = [
   },
   {
     id: 4,
-    primaryColor: '--primary-color',
-    secondaryColor: '--primary-color',
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#00f904', // Primary color
     text1: '#4',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -45,11 +45,15 @@ const data = [
 interface TableViewTokensProps {
   TableHeaderName?: string
   className?: string
+  primaryColor?: string
+  secondaryColor?: string
 }
 
 const TokensTableView: React.FC<TableViewTokensProps> = ({
   TableHeaderName,
   className,
+  primaryColor = '#00f904', // Default primary color
+  secondaryColor = '#ca0000', // Default secondary color
 }) => {
   return (
     <Box className="overflow-x-auto grid gap-4">
@@ -64,9 +68,10 @@ const TokensTableView: React.FC<TableViewTokensProps> = ({
           <Typography
             variant="h6"
             color="initial"
-            className={`${
-              item.id === 1 ? 'bg-[--primary-color]' : ''
-            } !p-2 h-8 items-center flex text-center rounded-md text-white border-none !text-sm font-semibold font-inter leading-normal`}
+            style={{
+              backgroundColor: item.id === 1 ? primaryColor : 'transparent',
+            }}
+            className="p-2 h-8 items-center flex text-center rounded-md text-white border-none !text-sm font-semibold font-inter leading-normal"
           >
             {item.text1}
           </Typography>
@@ -76,14 +81,16 @@ const TokensTableView: React.FC<TableViewTokensProps> = ({
             className="items-center flex text-white border-none !text-sm font-semibold font-inter leading-normal"
           >
             <Typography
-              className={`w-6 h-6 bg-[${item.primaryColor}] rounded-full mr-[6px]`}
+              style={{ backgroundColor: primaryColor }}
+              className="w-6 h-6 rounded-full mr-[6px]"
             ></Typography>
             {item.text2}
           </Typography>
           <Typography
             variant="h6"
             color="initial"
-            className={`text-[${item.secondaryColor}] ml-4 border-none !text-sm font-semibold font-inter leading-normal`}
+            style={{ color: secondaryColor }}
+            className="ml-4 border-none !text-sm font-semibold font-inter leading-normal"
           >
             {item.text3}
           </Typography>
