@@ -29,7 +29,7 @@ const NewestFarms = () => {
         >
           <Grid item xs={2} sm={4} md={4}>
             <Item>
-                <TableView />
+              <TableView />
             </Item>
           </Grid>
         </Grid>

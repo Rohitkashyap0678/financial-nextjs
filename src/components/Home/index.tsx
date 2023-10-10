@@ -5,7 +5,6 @@ import NewestFarms from '../NewestFarms'
 import Container from '@mui/material/Container'
 
 const Home = () => {
-
   // new lines
   return (
     <div>
