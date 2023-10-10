@@ -4,15 +4,22 @@ import EmptyGridBox from '../../common/EmptyGridBox'
 import NewestFarms from '../NewestFarms'
 import Container from '@mui/material/Container'
 import Footer from '../../Footer/Footer'
+import NewTokensFarms from '../NewTokensFarms'
 
 const Home = () => {
-  // new linesss
+  // Define an array of components to render conditionally
+  const componentsToRender = [
+    <EmptyGridBox key="emptyGridBox" />,
+    <NewestFarms key="newestFarms" />,
+    <NewTokensFarms key="newTokensFarms" />,
+  ]
+
   return (
     <div>
+      <Header />
       <Container maxWidth="xl">
-        <Header />
-        <EmptyGridBox />
-        <NewestFarms />
+        {/* Use the map function to render components */}
+        {componentsToRender.map((component) => component)}
       </Container>
       <Footer />
     </div>

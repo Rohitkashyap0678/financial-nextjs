@@ -1,14 +1,26 @@
 import { Button } from '@mui/material'
-import React from 'react'
+import React, { CSSProperties } from 'react'
 
 interface MyComponentProps {
   name?: string
+  classname?: string
+  style?: CSSProperties // Use CSSProperties for the style prop
+  onClick?: () => void // Add onClick property
 }
 
-function CustomButton({ name }: MyComponentProps) {
+export const CustomButton = ({
+  name,
+  classname,
+  style,
+  onClick,
+}: MyComponentProps) => {
   return (
     <div>
-      <Button className="rounded-[30px] text-white w-24 h-[35px] capitalize linear-gradient ">
+      <Button
+        onClick={onClick} // Pass the onClick prop to the Button component
+        style={style}
+        className={`rounded-[30px] !inherit text-white w-24 h-[35px] capitalize linear-gradient ${classname}`}
+      >
         {name}
       </Button>
     </div>
