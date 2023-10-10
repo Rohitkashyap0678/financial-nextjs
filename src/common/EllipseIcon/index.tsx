@@ -1,11 +1,10 @@
-import * as React from 'react'
-import Box from '@mui/material/Box'
-
-export default function EllipseIcon() {
+function EllipseIcon() {
   return (
-    <Box>
-      <Box className="ellipse-one"></Box>
-      <Box className="ellipse-two"></Box>
-    </Box>
+    <div>
+      <div className="ellipse-one"></div>
+      <div className="ellipse-two"></div>
+    </div>
   )
 }
+
+export default EllipseIcon

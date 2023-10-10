@@ -1,5 +1,8 @@
 import React from 'react'
 import InfoIcon from '@mui/icons-material/Info'
-export const CustomInfo = () => {
+
+function CustomInfo() {
   return <InfoIcon sx={{ color: '#00F904' }} />
 }
+
+export default CustomInfo
