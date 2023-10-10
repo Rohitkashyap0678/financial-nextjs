@@ -12,6 +12,7 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import MenuDropdown from '../../components/MenuDropdown'
 import FilterDropdown from '../FilterDropdown'
+import { CustomButton } from '../Custom/CustomButton'
 
 const pages = ['TOKEN', 'SERVICES', '$TOKEN', 'DEVELOPMENT SERVICES', 'DOCS']
 
@@ -170,9 +171,10 @@ function Header() {
             </Box>
 
             <Box className="gap-10 items-center">
-              <Button className="linear-gradient rounded-[30px] text-white w-24 h-[35px] capitalize ">
+              <CustomButton name={'conect'} />
+              {/* <Button className="linear-gradient rounded-[30px] text-white w-24 h-[35px] capitalize ">
                 Connect
-              </Button>
+              </Button> */}
             </Box>
           </Box>
         </Toolbar>

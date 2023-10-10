@@ -6,7 +6,6 @@ import Container from '@mui/material/Container'
 import NewTokensFarms from '../NewTokensFarms'
 
 const Home = () => {
-  // my testing
   return (
     <div>
       <Container maxWidth="xl">
