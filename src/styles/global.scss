@@ -15,3 +15,40 @@ body {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --primary-color: #00f904; /* Replace with your primary color */
+  --secondary-color: #ca0000; /* Replace with your secondary color */
+}
+
+// .elementShadow {
+//   --tw-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
+//     0 2px 4px -2px rgba(255, 255, 255, 0.1);
+//   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+//     0 2px 4px -2px var(--tw-shadow-color);
+//   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+//     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+// }
+
+.linear-gradient {
+  background: linear-gradient(270deg, #00f902 -16.36%, rgb(99 250 6 / 0%) 190%);
+}
+
+.ellipse-one {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #00f904;
+  border-radius: 100%;
+  background: #00f904;
+}
+
+.ellipse-two {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-top: -18px;
+  margin-left: 4px;
+  border: 1px solid #d9d9d9;
+  border-radius: 100%;
+  background: #d9d9d9;
+}

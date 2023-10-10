@@ -1,49 +1,59 @@
 import * as React from 'react'
 import { Typography, Box } from '@mui/material'
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 
 const data = [
   {
     id: 1,
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#ca0000', // Secondary color
     text1: '#1',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
-    text4: 'POOL:1000 USDT',
+    text4: 0.2, // Positive value for demonstration
   },
   {
     id: 2,
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#00f904', // Primary color
     text1: '#2',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
-    text4: 'APR: 10%',
+    text4: -0.12, // Negative value for demonstration
   },
   {
     id: 3,
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#ca0000', // Secondary color
     text1: '#3',
     text2: 'CAKE/BNB',
     text3: '$0.0034987',
-    text4: 'POOL:1000 USDT',
+    text4: 0.2, // Positive value for demonstration
   },
   {
     id: 4,
+    primaryColor: '#00f904', // Primary color
+    secondaryColor: '#00f904', // Primary color
     text1: '#4',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
-    text4: 'POOL:1000 USDT',
+    text4: -0.2, // Negative value for demonstration
   },
 ]
 
-interface TableViewProps {
+interface TableViewTokensProps {
   TableHeaderName?: string
   className?: string
   primaryColor?: string
   secondaryColor?: string
 }
 
-const TableView: React.FC<TableViewProps> = ({
+const TokensTableView: React.FC<TableViewTokensProps> = ({
   TableHeaderName,
   className,
-  primaryColor = '#00f904', // Default values for primary and secondary colors
-  secondaryColor = '#ca0000',
+  primaryColor = '#00f904', // Default primary color
+  secondaryColor = '#ca0000', // Default secondary color
 }) => {
   return (
     <Box className="overflow-x-auto grid gap-4">
@@ -87,9 +97,18 @@ const TableView: React.FC<TableViewProps> = ({
           <Typography
             variant="h6"
             color="initial"
-            className="text-white border-none !text-sm font-semibold font-inter leading-normal w-full text-end"
+            className={`${
+              item.text4 >= 0
+                ? 'text-green-500' // Green color for positive values
+                : 'text-red-500' // Red color for negative values
+            } border-none !text-sm font-semibold font-inter leading-normal`}
           >
-            {item.text4}
+            {item.text4 >= 0 ? (
+              <ArrowUpwardIcon className="font-semibold font-inter" />
+            ) : (
+              <ArrowDownwardIcon />
+            )}
+            {Math.abs(item.text4 * 100).toFixed(2) + '%'}
           </Typography>
         </Box>
       ))}
@@ -97,4 +116,4 @@ const TableView: React.FC<TableViewProps> = ({
   )
 }
 
-export default TableView
+export default TokensTableView
