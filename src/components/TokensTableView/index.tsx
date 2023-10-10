@@ -6,8 +6,8 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 const data = [
   {
     id: 1,
-    primaryColor: '#00f904', // Primary color
-    secondaryColor: '#ca0000', // Secondary color
+    primaryColor: '#00f904', // Replace with your primary color
+    secondaryColor: '#ca0000', // Replace with your secondary color
     text1: '#1',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -15,8 +15,8 @@ const data = [
   },
   {
     id: 2,
-    primaryColor: '#00f904', // Primary color
-    secondaryColor: '#00f904', // Primary color
+    primaryColor: '#00f904',
+    secondaryColor: '#00f904',
     text1: '#2',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -24,8 +24,8 @@ const data = [
   },
   {
     id: 3,
-    primaryColor: '#00f904', // Primary color
-    secondaryColor: '#ca0000', // Secondary color
+    primaryColor: '#00f904',
+    secondaryColor: '#ca0000',
     text1: '#3',
     text2: 'CAKE/BNB',
     text3: '$0.0034987',
@@ -33,8 +33,8 @@ const data = [
   },
   {
     id: 4,
-    primaryColor: '#00f904', // Primary color
-    secondaryColor: '#00f904', // Primary color
+    primaryColor: '#00f904',
+    secondaryColor: '#00f904',
     text1: '#4',
     text2: 'CAKE/BNB',
     text3: '$0.0000987',
@@ -52,8 +52,8 @@ interface TableViewTokensProps {
 const TokensTableView: React.FC<TableViewTokensProps> = ({
   TableHeaderName,
   className,
-  primaryColor = '#00f904', // Default primary color
-  secondaryColor = '#ca0000', // Default secondary color
+  primaryColor = '#00f904', // Default values for primary and secondary colors
+  secondaryColor = '#ca0000',
 }) => {
   return (
     <Box className="overflow-x-auto grid gap-4">
