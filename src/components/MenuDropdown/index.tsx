@@ -52,7 +52,10 @@ const MenuDropdown = () => {
           <Box sx={{ width: '100%' }}>
             <List component="nav" aria-label="secondary mailbox folder">
               {subItems.map((item, index) => (
-                <Link key={index} href={item === 'Yield Farms' ? '/farm' : '#'}>
+                <Link
+                  key={index}
+                  href={item === 'Yield Farms' ? '/farm' : '/createasset'}
+                >
                   <ListItemButton className="!p-0">
                     <ListItemText primary={item} />
                   </ListItemButton>
