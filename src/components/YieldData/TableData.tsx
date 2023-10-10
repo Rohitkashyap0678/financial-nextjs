@@ -29,7 +29,11 @@ export const TableData = () => {
               </Typography>
             </TableCell>
             <TableCell sx={{ color: 'white' }}>
-              <CustomButton name="stake" />
+              <CustomButton
+                classname="revert"
+                style={{ position: 'inherit' }}
+                name="stake"
+              />
             </TableCell>
             <TableCell sx={{ color: 'white ' }}>
               <Typography variant="subtitle2" noWrap color="white">
