@@ -9,23 +9,34 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
-import styles from './index.module.scss'
+import MenuDropdown from '../../components/MenuDropdown'
+import FilterDropdown from '../FilterDropdown'
 
-const pages = ['TOKEN', 'SERVICES', 'DEVELOPMENT SERVICES', 'DOCS']
+const pages = ['TOKEN', 'SERVICES', '$TOKEN', 'DEVELOPMENT SERVICES', 'DOCS']
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isFilterDropdownOpen, setIsFilterDropdownOpen] = React.useState(false) // New state variable
 
   const handleOpenNavMenu = (event?: any) => {
     setAnchorElNav(event.currentTarget)
+    setIsMenuOpen(true) // Open the menu
   }
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)
+    setIsMenuOpen(false) // Close the menu
+    // dd
+  }
+
+  // Toggle the FilterDropdown component
+  const toggleFilterDropdown = () => {
+    setIsFilterDropdownOpen(!isFilterDropdownOpen)
   }
 
   return (
-    <AppBar position="static" className="bg-black elementShadow">
+    <AppBar position="static" className="bg-black elementShadow sticky top-0">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -86,12 +97,32 @@ function Header() {
               {pages.map((page) => (
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => {
+                    handleCloseNavMenu()
+                    if (page === 'SERVICES') {
+                      setIsMenuOpen(!isMenuOpen) // Toggle the MenuDropdown
+                    } else if (page === '$TOKEN') {
+                      toggleFilterDropdown() // Toggle the FilterDropdown
+                    }
+                  }}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                   {page}
                 </Button>
               ))}
+              {isMenuOpen && (
+                <Box className="top-[72px] left-[160px] absolute">
+                  {' '}
+                  <MenuDropdown />{' '}
+                </Box>
+              )}
+              {isFilterDropdownOpen && (
+                <Box className="top-[72px] left-[300px] absolute">
+                  <FilterDropdown />{' '}
+                </Box>
+              )}
+
+              {/* Render MenuDropdown when isMenuOpen is true */}
             </Box>
 
             <Box className="items-center flex-grow-0 hidden xs:flex md:flex">
@@ -114,9 +145,7 @@ function Header() {
             </Box>
 
             <Box className="gap-10 items-center">
-              <Button
-                className={`rounded-[30px] text-white w-24 h-[35px] capitalize ${styles.linearGradient}`}
-              >
+              <Button className="linear-gradient rounded-[30px] text-white w-24 h-[35px] capitalize ">
                 Connect
               </Button>
             </Box>
