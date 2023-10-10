@@ -12,7 +12,7 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import MenuDropdown from '../../components/MenuDropdown'
 import FilterDropdown from '../FilterDropdown'
-import { CustomButton } from '../Custom/CustomButton'
+import CustomButton from '../Custom/CustomButton'
 
 const pages = ['TOKEN', 'SERVICES', '$TOKEN', 'DEVELOPMENT SERVICES', 'DOCS']
 

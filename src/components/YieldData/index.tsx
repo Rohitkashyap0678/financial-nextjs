@@ -13,7 +13,6 @@ import Table from '@mui/material/Table'
 import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
-import { CustomInfo } from '../../common/Custom/CustomInfo'
 import CalculateIcon from '@mui/icons-material/Calculate'
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
 import LanguageIcon from '@mui/icons-material/Language'
@@ -22,6 +21,7 @@ import CampaignIcon from '@mui/icons-material/Campaign'
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile'
 import SubscriptIcon from '@mui/icons-material/Subscript'
 import AprCalculatorPopup from '../../common/AprCalculatorPopup'
+import { CustomInfo } from '../../common'
 
 export default function YieldData() {
   const [isDialogOpen, setIsDialogOpen] = useState(false)

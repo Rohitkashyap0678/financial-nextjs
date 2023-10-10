@@ -26,3 +26,5 @@ export const CustomButton = ({
     </div>
   )
 }
+
+export default CustomButton

@@ -1,7 +1,6 @@
 import React from 'react'
-import EllipseIcon from '../../common/EllipseIcon'
+
 import Typography from '@mui/material/Typography'
-import { CustomButton } from '../../common/Custom/CustomButton'
 import { Box } from '@mui/material'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt'
@@ -10,7 +9,9 @@ import Table from '@mui/material/Table'
 import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
-import { CustomInfo } from '../../common/Custom/CustomInfo'
+import CustomButton from '../../common/Custom/CustomButton'
+import CustomInfo from '../../common/Custom/CustomInfo'
+import EllipseIcon from '../../common/EllipseIcon'
 export const TableData = () => {
   return (
     <div>

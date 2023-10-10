@@ -3,6 +3,7 @@ import Header from '../../common/Header'
 import EmptyGridBox from '../../common/EmptyGridBox'
 import NewestFarms from '../NewestFarms'
 import Container from '@mui/material/Container'
+import Footer from '../../Footer/Footer'
 import NewTokensFarms from '../NewTokensFarms'
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
         {/* Use the map function to render components */}
         {componentsToRender.map((component) => component)}
       </Container>
+      <Footer />
     </div>
   )
 }
