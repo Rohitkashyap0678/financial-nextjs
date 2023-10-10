@@ -27,6 +27,7 @@ function Header() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)
     setIsMenuOpen(false) // Close the menu
+    // dd
   }
 
   // Toggle the FilterDropdown component
