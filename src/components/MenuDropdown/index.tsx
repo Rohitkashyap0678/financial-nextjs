@@ -61,7 +61,9 @@ const MenuDropdown = () => {
                 <Link
                   key={index}
                   passHref
-                  href={item === 'Yield Farms' ? '/farm' : '/createasset'}
+                  href={
+                    item === 'Yield Farms' ? '/Yield-Farms' : '/createasset'
+                  }
                 >
                   <ListItemButton className="!p-0 !text-xs !font-semibold">
                     <ListItemText
