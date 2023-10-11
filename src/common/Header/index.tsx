@@ -176,7 +176,7 @@ function Header() {
             <Box className="items-center flex-grow-0 hidden xs:flex md:flex">
               <Button
                 sx={{ my: 2, color: 'white', display: 'flex' }}
-                className="!text-sm typo-sm"
+                className="!text-sm typo-sm rounded-[30px] px-4 !bg-[#151618]"
               >
                 <Typography
                   noWrap

@@ -43,10 +43,10 @@ const TableView: React.FC<TableViewProps> = ({
   TableHeaderName,
   className,
   primaryColor = '#00f904', // Default values for primary and secondary colors
-  secondaryColor = '#ca0000',
+  secondaryColor = '#00f904',
 }) => {
   return (
-    <Box className="overflow-x-auto grid gap-4">
+    <Box className="overflow-x-auto over-flow-hidden-scroll over-flow-hidden grid gap-2">
       <Typography className={`typo-lg ${className}`}>
         {TableHeaderName}
       </Typography>
@@ -79,8 +79,11 @@ const TableView: React.FC<TableViewProps> = ({
           <Typography
             variant="h6"
             color="initial"
-            style={{ color: secondaryColor }}
-            className="ml-4 border-none !text-sm font-semibold font-inter leading-normal"
+            style={{
+              color:
+                item.id === 1 || item.id === 3 ? secondaryColor : '#CA0000',
+            }}
+            className="ml-4 border-none !text-sm !font-semibold font-inter leading-normal"
           >
             {item.text3}
           </Typography>
