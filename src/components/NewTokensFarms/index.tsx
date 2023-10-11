@@ -43,7 +43,7 @@ const NewTokensFarms = () => {
       </Box>
       <Typography
         variant="h6"
-        className="text-end pr-6 text-white cursor-pointer"
+        className="typo-md text-end pr-6 text-white cursor-pointer"
       >
         View More
       </Typography>

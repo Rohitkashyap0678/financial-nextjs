@@ -18,7 +18,10 @@ body {
 
 :root {
   --primary-color: #00f904; /* Replace with your primary color */
-  --secondary-color: #ca0000; /* Replace with your secondary color */
+  --secondary-color: #ca0000;
+  --white: #fff;
+  --light-dark: #48494d;
+  --darkest-color: #151618; /* Replace with your secondary color */
 }
 
 .element-shadow {
@@ -37,7 +40,7 @@ body {
 
 /* Customize scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background-color: #d9d9d9;
+  background-color: var(--white);
 }
 
 /* Customize scrollbar track (the background) */
@@ -50,27 +53,32 @@ body {
 }
 
 .typo-sm {
-  color: #fff;
+  color: var(--white);
   font-weight: 600 !important;
   font-size: 12px !important;
 }
 
 .typo-md {
-  color: #fff;
+  color: var(--white);
   font-weight: 600 !important;
   font-size: 14px !important;
 }
 
 .typo-lg {
-  color: #fff;
+  color: var(--white);
   font-weight: 600 !important;
   font-size: 16px !important;
 }
 
 .typo-xl {
-  color: #fff;
+  color: var(--white);
   font-weight: 700 !important;
   font-size: 20px !important;
+}
+
+.vector-color {
+  color: var(--light-dark) !important;
+  background: var(--light-dark) !important;
 }
 
 .live-button {
@@ -78,12 +86,22 @@ body {
   width: 95px;
   height: 33px;
   border-radius: 5px 0 0 5px;
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
   font-size: 14px;
   font-style: normal;
   line-height: normal;
-  background: #48494d;
+  background: var(--light-dark);
+}
+
+.chain-button {
+  flex-shrink: 0;
+
+  // width: 88px;
+  // height: 33px;
+  width: 100%;
+  color: var(--white);
+  background: var(--darkest-color);
 }
 
 .custom-input {
@@ -96,9 +114,9 @@ body {
 }
 
 .radio-button input[type='radio'] {
-  border: 3px solid #48494d;
+  border: 3px solid var(--light-dark);
   border-radius: 5px;
-  background: #48494d;
+  background: var(--light-dark);
 }
 
 .custom-button-two {
@@ -107,7 +125,7 @@ body {
   height: 40px;
   padding: 10px;
   border-radius: 20px;
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
   font-size: 14px;
   text-align: left !important;

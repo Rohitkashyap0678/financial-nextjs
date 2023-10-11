@@ -72,6 +72,8 @@ function Header() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
+            height="48px"
+            width="46px"
             variant="h6"
             noWrap
             component="a"

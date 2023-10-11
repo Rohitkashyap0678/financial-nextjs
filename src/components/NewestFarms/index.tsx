@@ -43,7 +43,7 @@ const NewestFarms = () => {
       </Box>
       <Typography
         variant="h6"
-        className="text-end pr-6 cursor-pointer text-white"
+        className=" typo-md text-end pr-6 cursor-pointer text-white"
       >
         View More
       </Typography>
