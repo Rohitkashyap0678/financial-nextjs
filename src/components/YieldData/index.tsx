@@ -37,18 +37,18 @@ export default function YieldData() {
   const renderTableRow = () => {
     return (
       <TableRow>
-        <TableCell className="!p-3" sx={{ color: 'white' }}>
+        <TableCell className="!p-3">
           <EllipseIcon />
         </TableCell>
-        <TableCell className="!p-3" sx={{ color: 'white' }} align="right">
-          <Typography noWrap variant="subtitle2" color="white">
+        <TableCell className="!p-3" align="right">
+          <Typography noWrap className="typo-md">
             <CustomInfo /> STK | RWD
           </Typography>
-          <Typography noWrap variant="subtitle2" color="white">
+          <Typography noWrap className="typo-lg pt-2">
             TOKE/BNB
           </Typography>
         </TableCell>
-        <TableCell className="!p-3" sx={{ color: 'white' }}>
+        <TableCell className="!p-3">
           <CustomButton
             classname="inherit"
             onClick={handleClickOpen}
@@ -56,18 +56,12 @@ export default function YieldData() {
             name="Stake"
           />
         </TableCell>
-        <TableCell className="!p-3" sx={{ color: 'white ' }}>
-          <Typography variant="subtitle2" noWrap color="white">
-            My Earned
-          </Typography>
-          <Typography variant="subtitle2" color="white">
-            0
-          </Typography>
+        <TableCell className="!p-3 typo-sm">
+          <Typography noWrap>My Earned</Typography>
+          <Typography className="">0</Typography>
         </TableCell>
-        <TableCell className="!p-3" sx={{ color: 'white' }}>
-          <Typography variant="subtitle2" color="white">
-            Earn
-          </Typography>
+        <TableCell className="!p-3 typo-sm">
+          <Typography>Earn</Typography>
           <Typography
             variant="subtitle2"
             noWrap
@@ -79,42 +73,27 @@ export default function YieldData() {
             <CalculateIcon className="text-[--primary-color]" />
           </Typography>
         </TableCell>
-        <TableCell className="!p-3" sx={{ color: 'white' }}>
-          <Typography noWrap variant="subtitle2" color="white">
-            Staked Assets
-          </Typography>
-          <Typography variant="subtitle2" color="white">
-            78,000
-          </Typography>
+        <TableCell className="!p-3 typo-sm">
+          <Typography noWrap>Staked Assets</Typography>
+          <Typography>78,000</Typography>
         </TableCell>
 
-        <TableCell className="!p-3" sx={{ color: 'white' }}>
-          <Typography noWrap variant="subtitle2" color="white">
-            Available Rewards
-          </Typography>
-          <Typography variant="subtitle2" color="white">
-            0000
-          </Typography>
+        <TableCell className="!p-3 typo-sm">
+          <Typography noWrap>Available Rewards</Typography>
+          <Typography>0000</Typography>
         </TableCell>
-        <TableCell className="!p-3">
-          <Typography variant="subtitle2" color="white">
-            Staked
-          </Typography>
-          <Typography variant="subtitle2" color="white">
-            000
-          </Typography>
+        <TableCell className="!p-3 typo-sm">
+          <Typography>Staked</Typography>
+          <Typography>000</Typography>
         </TableCell>
-        <TableCell className="!p-3">
-          <Typography variant="subtitle2" color="white">
-            <CustomInfo />
-            Penalty: 2%
+        <TableCell className="!p-3 typo-sm ">
+          <Typography>
+            <CustomInfo /> Penalty: 2%
           </Typography>
-          <Typography noWrap variant="subtitle2" color="white">
+          <Typography noWrap>
             <CustomInfo /> Rewards Maturation: 60 Seconds
           </Typography>
-          <Typography noWrap variant="subtitle2" color="white">
-            Start: 10/10/2023 End: 15/10/2023
-          </Typography>
+          <Typography noWrap>Start: 10/10/2023 End: 15/10/2023</Typography>
         </TableCell>
         <TableCell className="!p-3">
           <Box
@@ -148,19 +127,14 @@ export default function YieldData() {
             <InsertDriveFileIcon className="text-[--primary-color]" />
           </Box>
         </TableCell>
-        <TableCell className="!p-3">
-          <Typography
-            variant="subtitle2"
-            color="white"
-            className="flex gap-1 mb-3 items-center"
-          >
+        <TableCell
+          className="!p-3"
+          sx={{ fontSize: '14px', fontWeight: '700', color: '#fff' }}
+        >
+          <Typography className="flex gap-1 mb-3 items-center">
             <ThumbUpAltIcon className="text-[--primary-color]" /> 100
           </Typography>
-          <Typography
-            variant="subtitle2"
-            color="white"
-            className="flex gap-1 items-center"
-          >
+          <Typography className="flex gap-1 items-center">
             <ThumbDownAltIcon className="text-[--secondary-color]" /> 100
           </Typography>
         </TableCell>

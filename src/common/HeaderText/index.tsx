@@ -1,5 +1,4 @@
 import React from 'react'
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
 interface Props {
@@ -7,13 +6,7 @@ interface Props {
 }
 
 const HeaderText: React.FC<Props> = ({ headerName }) => {
-  return (
-    <Box className="p-6">
-      <Typography variant="h6" color="white">
-        {headerName}
-      </Typography>
-    </Box>
-  )
+  return <Typography className="typo-xl">{headerName}</Typography>
 }
 
 export default HeaderText

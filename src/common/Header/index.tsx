@@ -110,7 +110,11 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  sx={{ fontSize: '15px', fontWeight: '600' }}
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -172,11 +176,11 @@ function Header() {
             <Box className="items-center flex-grow-0 hidden xs:flex md:flex">
               <Button
                 sx={{ my: 2, color: 'white', display: 'flex' }}
-                className="!text-sm"
+                className="!text-sm typo-sm"
               >
                 <Typography
                   noWrap
-                  className="mr-2 hidden md:flex  bg-white rounded-full w-5 h-5"
+                  className="typo-sm mr-2 hidden md:flex  bg-white rounded-full w-5 h-5"
                 ></Typography>
                 BNB Smart Chain
               </Button>

@@ -47,13 +47,13 @@ const TableView: React.FC<TableViewProps> = ({
 }) => {
   return (
     <Box className="overflow-x-auto grid gap-4">
-      <Typography variant="h6" className={className}>
+      <Typography className={`typo-lg ${className}`}>
         {TableHeaderName}
       </Typography>
       {data.map((item) => (
         <Box
           key={item.id}
-          className="flex gap-6 items-center whitespace-nowrap justify-between"
+          className="typo-md flex gap-6  items-center whitespace-nowrap justify-between"
         >
           <Typography
             variant="h6"
