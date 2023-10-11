@@ -28,8 +28,8 @@ const MenuDropdown = () => {
 
   return (
     <div className="bg-black  min-w-[300px] relative !z-50 ">
-      <Box className="border-spacing-1 border-white  rounded-2xl border-2 opacity-90">
-        <Box className="flex gap-2 items-center px-3 py-2 border-b">
+      <Box className="border-spacing-1 border-[#48494D]  rounded-2xl border-2 opacity-90">
+        <Box className="flex gap-2 items-center px-3 py-1 border-b border-[#48494D]">
           <Typography
             variant="h6"
             noWrap
@@ -40,7 +40,7 @@ const MenuDropdown = () => {
           Homepage
         </Box>
 
-        <Box className="flex gap-2 items-baseline px-3 py-2 border-b">
+        <Box className="flex gap-2 items-baseline px-3 py-0 border-b border-[#48494D]">
           <Typography
             variant="h6"
             noWrap
@@ -50,14 +50,18 @@ const MenuDropdown = () => {
           ></Typography>
 
           <Box sx={{ width: '100%' }}>
-            <List component="nav" aria-label="secondary mailbox folder">
+            <List
+              component="nav"
+              className=""
+              aria-label="secondary mailbox folder"
+            >
               {subItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item === 'Yield Farms' ? '/farm' : '/createasset'}
                 >
                   <ListItemButton className="!p-0">
-                    <ListItemText primary={item} />
+                    <ListItemText className="!m-0" primary={item} />
                   </ListItemButton>
                 </Link>
               ))}
@@ -65,7 +69,7 @@ const MenuDropdown = () => {
           </Box>
         </Box>
 
-        <Box className="border-b flex gap-2 items-baseline px-3 py-2 ">
+        <Box className="border-b border-[#48494D] flex gap-2 items-baseline px-3 py-1 ">
           <Typography
             variant="h6"
             noWrap
@@ -75,17 +79,21 @@ const MenuDropdown = () => {
           ></Typography>
 
           <Box sx={{ width: '100%' }}>
-            <List component="nav" aria-label="secondary mailbox folder">
+            <List
+              component="nav"
+              className=""
+              aria-label="secondary mailbox folder"
+            >
               {subItemsAssets.map((item, index) => (
                 <ListItemButton key={index} className="!p-0">
-                  <ListItemText primary={item} />
+                  <ListItemText className="!m-0" primary={item} />
                 </ListItemButton>
               ))}
             </List>
           </Box>
         </Box>
 
-        <Box className="flex gap-2 items-center px-3 py-2 border-b">
+        <Box className="flex gap-2 items-center px-3 py-1 border-b border-[#48494D]">
           <Typography
             variant="h6"
             noWrap
@@ -96,12 +104,16 @@ const MenuDropdown = () => {
           Audits
         </Box>
 
-        <Box className=" flex gap-2 items-baseline px-3 py-2 ">
+        <Box className=" flex gap-2 items-baseline px-3 py-1 ">
           <Box sx={{ width: '100%' }} className="pl-5">
-            <List component="nav" aria-label="secondary mailbox folder">
+            <List
+              component="nav"
+              className=""
+              aria-label="secondary mailbox folder"
+            >
               {subItemsTools.map((item, index) => (
                 <ListItemButton key={index} className="!p-0">
-                  <ListItemText primary={item} />
+                  <ListItemText className="!m-0" primary={item} />
                 </ListItemButton>
               ))}
             </List>

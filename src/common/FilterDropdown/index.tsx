@@ -13,7 +13,7 @@ interface FilterDropdownProps {
 const FilterDropdown: React.FC<FilterDropdownProps> = ({ subItemsTools }) => {
   return (
     <div className="bg-black min-w-[300px]">
-      <Box className="border-white rounded-2xl border-2 opacity-90">
+      <Box className="border-[#48494D] rounded-2xl border-2 opacity-90">
         <Box>
           <Box>
             <List component="nav" aria-label="folder" className="!p-0 !m-0">
@@ -25,7 +25,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({ subItemsTools }) => {
                   <ListItemButton className="!p-0" key={index}>
                     <ListItemText
                       primary={item}
-                      className={`border-white font-semibold m-1 py-4 px-6 ${
+                      className={`border-[#48494D] !text-xs !font-semibold m-1 py-2 px-6 ${
                         index === subItemsTools.length - 1 ? '' : 'border-b-2'
                       }`}
                     />
