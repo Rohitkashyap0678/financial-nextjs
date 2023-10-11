@@ -14,6 +14,7 @@ import Divider from '@mui/material/Divider'
 import ThirdChain from '../../components/Createassetdata/ThirdChain'
 import FourthChain from '../../components/Createassetdata/FourthChain'
 import FifthChain from '../../components/Createassetdata/FifthChain'
+import SxithChain from '../../components/Createassetdata/SxithChain'
 export default function index() {
   return (
     <Box>
@@ -36,6 +37,8 @@ export default function index() {
           <FourthChain />
           <Divider className="vector-color" />
           <FifthChain />
+          <Divider className="vector-color" />
+          <SxithChain />
         </TableContainer>
       </Container>
     </Box>

@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
-import CustomInfo from '../../common/Custom/CustomInfo'
-import CustonInput from '../../common/Custom/CustomInput'
+
 import Box from '@mui/material/Box'
+import InputDesign from '../../common/Custom/InputDesign'
 interface GridItem {
   id: number
   text: string
@@ -25,11 +25,7 @@ function FirstChain() {
         <Grid container spacing={2}>
           {gridData.map((item) => (
             <Grid item xs={12} sm={6} md={3} key={item.id}>
-              <Typography className="typo-md" textTransform={'uppercase'}>
-                <CustomInfo />
-                {item.text}
-              </Typography>
-              <CustonInput placeholder={item.placeholder} />
+              <InputDesign placeholder={item.placeholder} name={item.text} />
             </Grid>
           ))}
         </Grid>

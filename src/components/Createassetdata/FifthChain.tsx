@@ -1,9 +1,10 @@
 import React from 'react'
 import { Box, Grid, Typography } from '@mui/material'
 import { CustomInfo } from '../../common'
-import CustonInput from '../../common/Custom/CustomInput'
 import RadioButton from '../../common/RadioButton'
 import GridLayout from '../../common/GridLayout'
+import InputDesign from '../../common/Custom/InputDesign'
+import CustonInput from '../../common/Custom/CustomInput'
 export default function FifthChain() {
   return (
     <Box>
@@ -67,11 +68,11 @@ function FifthChainOne() {
               {/* tabuse */}
             </Typography>
             <RadioButton />
-            <Typography className="typo-md" textTransform={'uppercase'}>
-              <CustomInfo />
-              Set LP Address
-              <CustonInput />
-            </Typography>
+
+            <InputDesign
+              placeholder="Input Your LP Address"
+              name="Set LP Address"
+            />
           </Grid>
 
           {/* Grid Item 4 */}

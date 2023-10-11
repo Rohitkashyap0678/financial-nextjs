@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material'
 import { CustomInfo } from '../../common'
-import CustonInput from '../../common/Custom/CustomInput'
 import RadioButton from '../../common/RadioButton'
+import InputDesign from '../../common/Custom/InputDesign'
 function FourthChain() {
   return (
     <div>
@@ -9,29 +9,23 @@ function FourthChain() {
         <Grid container spacing={2}>
           {/* Grid Item 1 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
-              <CustomInfo />
-              MAX SELL +0.07 ETH
-            </Typography>
-            <CustonInput placeholder="input address" />
+            <InputDesign
+              placeholder="Input Max Sell"
+              name="MAX SELL +0.07 ETH"
+            />
           </Grid>
 
           {/* Grid Item 2 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
-              <CustomInfo />
-              MAX SELL +0.07 ETH
-            </Typography>
-            <CustonInput placeholder="input address" />
+            <InputDesign placeholder="Input Max Buy" name="MAX BUY 0.08 ETH" />
           </Grid>
 
           {/* Grid Item 3 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
-              <CustomInfo />
-              MAX WALLET 0.09 ETH
-            </Typography>
-            <CustonInput placeholder="input address" />
+            <InputDesign
+              placeholder="Input Max Wallet"
+              name="MAX WALLET 0.09 ETH"
+            />
           </Grid>
 
           {/* Grid Item 4 */}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Grid, Typography } from '@mui/material'
 import { CustomInfo } from '../../common'
+import CustonInput from '../../common/Custom/CustomInput'
 import RadioButton from '../../common/RadioButton'
-import InputDesign from '../../common/Custom/InputDesign'
 export default function SecoundChain() {
   return (
     <div>
@@ -10,23 +10,29 @@ export default function SecoundChain() {
         <Grid container spacing={2}>
           {/* Grid Item 1 */}
           <Grid item xs={12} sm={6} md={3}>
-            <InputDesign
-              placeholder="input address"
-              name={'Different Supply Recipient +0.01 BNB'}
-            />
+            <Typography
+              variant="subtitle2"
+              textTransform={'uppercase'}
+              color="white"
+            >
+              <CustomInfo />
+              Different Supply Recipient +0.01 BNB
+            </Typography>
+            <CustonInput placeholder="input address" />
           </Grid>
 
           {/* Grid Item 2 */}
           <Grid item xs={12} sm={6} md={3}>
-            <InputDesign
-              placeholder="input address"
-              name="Different Owner +0.02 ETH"
-            />
+            <Typography className="typo-md" textTransform={'uppercase'}>
+              <CustomInfo />
+              Different Owner +0.02 ETH
+            </Typography>
+            <CustonInput placeholder="input address" />
           </Grid>
 
           {/* Grid Item 3 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md">
+            <Typography className="typo-md" textTransform={'uppercase'}>
               <CustomInfo />
               Renounce Ownership Activate? +0.02 ETH
             </Typography>
@@ -35,7 +41,7 @@ export default function SecoundChain() {
 
           {/* Grid Item 4 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md">
+            <Typography className="typo-md" textTransform={'uppercase'}>
               <CustomInfo />
               Pausable +0.02 ETH
             </Typography>
