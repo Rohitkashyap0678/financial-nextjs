@@ -19,9 +19,9 @@ import LanguageIcon from '@mui/icons-material/Language'
 import SearchIcon from '@mui/icons-material/Search'
 import CampaignIcon from '@mui/icons-material/Campaign'
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile'
-import SubscriptIcon from '@mui/icons-material/Subscript'
 import AprCalculatorPopup from '../../common/AprCalculatorPopup'
 import { CustomInfo } from '../../common'
+import Twitter from '../../img/twitter.png'
 
 export default function YieldData() {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
@@ -44,7 +44,7 @@ export default function YieldData() {
           <Typography noWrap className="typo-md">
             <CustomInfo /> STK | RWD
           </Typography>
-          <Typography noWrap className="typo-lg pt-2">
+          <Typography noWrap className="typo-lg pt-3 ">
             TOKE/BNB
           </Typography>
         </TableCell>
@@ -52,79 +52,90 @@ export default function YieldData() {
           <CustomButton
             classname="inherit"
             onClick={handleClickOpen}
-            // style={{ position: 'inherit' }}
             name="Stake"
           />
         </TableCell>
         <TableCell className="!p-3 typo-sm">
-          <Typography noWrap>My Earned</Typography>
-          <Typography className="">0</Typography>
+          <Typography noWrap className="text-xs font-semibold">
+            My Earned
+          </Typography>
+          <Typography className="text-xs font-semibold">0</Typography>
         </TableCell>
         <TableCell className="!p-3 typo-sm">
-          <Typography>Earn</Typography>
+          <Typography className="text-xs font-semibold">Earn</Typography>
           <Typography
             variant="subtitle2"
             noWrap
             color="#00F904"
-            className="whitespace-nowrap"
+            className="whitespace-nowrap text-xs font-semibold"
           >
-            APR <RocketLaunchIcon className=" text-[--primary-color]" /> Up to
-            40%
-            <CalculateIcon className="text-[--primary-color]" />
+            APR <RocketLaunchIcon className="w-5 h-5 text-[--primary-color]" />{' '}
+            Up to 40%
+            <CalculateIcon className="w-5 pl-[1px] h-5 text-[--primary-color] opacity-90" />
           </Typography>
         </TableCell>
         <TableCell className="!p-3 typo-sm">
-          <Typography noWrap>Staked Assets</Typography>
-          <Typography>78,000</Typography>
+          <Typography noWrap className="text-xs font-semibold">
+            Staked Assets
+          </Typography>
+          <Typography className="text-xs font-semibold">78,000</Typography>
         </TableCell>
 
         <TableCell className="!p-3 typo-sm">
-          <Typography noWrap>Available Rewards</Typography>
-          <Typography>0000</Typography>
+          <Typography noWrap className="text-xs font-semibold">
+            Available Rewards
+          </Typography>
+          <Typography className="text-xs font-semibold">0000</Typography>
         </TableCell>
         <TableCell className="!p-3 typo-sm">
-          <Typography>Staked</Typography>
-          <Typography>000</Typography>
+          <Typography className="text-xs font-semibold">Staked</Typography>
+          <Typography className="text-xs font-semibold">000</Typography>
         </TableCell>
         <TableCell className="!p-3 typo-sm ">
-          <Typography>
+          <Typography className="text-xs font-semibold">
             <CustomInfo /> Penalty: 2%
           </Typography>
-          <Typography noWrap>
+          <Typography className="text-xs font-semibold" noWrap>
             <CustomInfo /> Rewards Maturation: 60 Seconds
           </Typography>
-          <Typography noWrap>Start: 10/10/2023 End: 15/10/2023</Typography>
+          <Typography className="text-xs font-semibold" noWrap>
+            Start: 10/10/2023 End: 15/10/2023
+          </Typography>
         </TableCell>
         <TableCell className="!p-3">
           <Box
-            className="flex gap-[2px]"
+            className="flex gap-[2px] justify-between"
             sx={{
-              padding: '10px',
+              padding: '4px 6px',
               display: 'flex',
               margin: '4px',
               background: '#151617',
-              borderRadius: '10px',
+              borderRadius: '20px',
               color: 'gray',
             }}
           >
             <TelegramIcon />
-            <SubscriptIcon className="text-[--primary-color]" />
+            <img
+              alt="twitter"
+              className=" text-[--primary-color]"
+              src={Twitter.src}
+            />
             <LanguageIcon className="text-[--primary-color]" />
           </Box>
           <Box
-            className="flex gap-[2px]"
+            className="flex gap-[2px] justify-between"
             sx={{
-              padding: '10px',
+              padding: '4px 6px',
               display: 'flex',
               margin: '4px',
               background: '#151617',
-              borderRadius: '10px',
+              borderRadius: '20px',
               color: 'gray',
             }}
           >
-            <SearchIcon className="text-[--primary-color]" />
+            <SearchIcon className="text-[--primary-color] opacity-50" />
             <CampaignIcon className="text-[--primary-color]" />
-            <InsertDriveFileIcon className="text-[--primary-color]" />
+            <InsertDriveFileIcon className="text-[--primary-color] opacity-50" />
           </Box>
         </TableCell>
         <TableCell

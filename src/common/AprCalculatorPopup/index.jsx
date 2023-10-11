@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import Typography from '@mui/material/Typography'
 import { CustomButton } from '../Custom/CustomButton'
+import CustomInfo from '../Custom/CustomInfo'
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -54,6 +55,28 @@ const AprCalculatorPopup = ({ open, handleClose }) => {
           <CloseIcon />
         </IconButton>
         <DialogContent dividers>
+          <Box>
+            <Typography className="typo-md flex gap-1 items-center">
+              <CustomInfo />
+              LP Fee Activate it? +0.12 BNB
+            </Typography>
+            <Typography className="typo-md flex gap-1 items-center">
+              <CustomInfo />
+              LP Fee Activate it? +0.12 BNB
+            </Typography>
+            <Typography className="typo-md flex gap-1 items-center">
+              <CustomInfo />
+              LP Fee Activate it? +0.12 BNB
+            </Typography>
+            <Typography className="typo-md flex gap-1 items-center">
+              <CustomInfo />
+              LP Fee Activate it? +0.12 BNB
+            </Typography>
+            <Typography className="typo-md flex gap-1 items-center">
+              <CustomInfo />
+              LP Fee Activate it? +0.12 BNB
+            </Typography>
+          </Box>
           <Typography gutterBottom>
             Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
             dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta

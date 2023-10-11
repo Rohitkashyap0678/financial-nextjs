@@ -23,9 +23,9 @@ function FilterBy() {
   //   'Whitepaper',
   // ]
   const tabs = [
-    { value: 'one', label: 'Tab One' },
-    { value: 'two', label: 'Tab Two' },
-    { value: 'three', label: 'Tab Three' },
+    { value: 'one', label: 'Live' },
+    { value: 'two', label: 'Upcoming' },
+    { value: 'three', label: 'Finished' },
   ]
 
   return (
