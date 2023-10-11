@@ -6,10 +6,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  color: white;
+  color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  background-color: black;
+  background: #151618;
 }
 
 * {
@@ -31,8 +31,46 @@ body {
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Customize scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+}
+
+/* Customize scrollbar track (the background) */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
 .linear-gradient {
   background: linear-gradient(270deg, #00f902 -16.36%, rgb(99 250 6 / 0%) 190%);
+}
+
+.typo-sm {
+  color: #fff;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.typo-md {
+  color: #fff;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+.typo-lg {
+  color: #fff;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+.typo-xl {
+  color: #fff;
+  font-weight: 700 !important;
+  font-size: 20px !important;
 }
 
 .live-button {
