@@ -21,16 +21,6 @@ body {
   --secondary-color: #ca0000; /* Replace with your secondary color */
 }
 
-.element-shadow {
-  --tw-shadow: 0 4px 6px -1px rgb(255 255 255 / 10%),
-    0 2px 4px -2px rgb(255 255 255 / 10%);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
-    0 2px 4px -2px var(--tw-shadow-color);
-
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 0;
@@ -114,4 +104,9 @@ body {
   text-align: left !important;
   text-transform: capitalize;
   background: #1f2023;
+}
+
+.list-item-text span {
+  font-weight: 600 !important;
+  font-size: 12px !important;
 }

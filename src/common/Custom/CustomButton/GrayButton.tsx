@@ -3,12 +3,13 @@ import Button from '@mui/material/Button'
 
 interface MyComponentProps {
   name?: string
+  className?: string // Define a className prop
 }
 
-function GrayButton({ name }: MyComponentProps) {
+function GrayButton({ name, className }: MyComponentProps) {
   return (
     <div>
-      <Button className="custom-button-two">{name}</Button>
+      <Button className={`custom-button-two ${className}`}>{name}</Button>
     </div>
   )
 }
