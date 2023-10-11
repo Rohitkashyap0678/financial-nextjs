@@ -28,7 +28,7 @@ const NewestFarms = () => {
     <div>
       <HeaderText headerName="YIELD FARMS" />
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container className="p-6 pb-2" spacing={{ xs: 2, md: 3 }}>
+        <Grid container className="pt-6 pb-2" spacing={{ xs: 2, md: 3 }}>
           {headers.map((header, index) => (
             <Grid item xs={12} sm={12} md={6} lg={4} key={index}>
               <Item>
@@ -43,7 +43,7 @@ const NewestFarms = () => {
       </Box>
       <Typography
         variant="h6"
-        className=" typo-md text-end pr-6 cursor-pointer text-white"
+        className="text-end pr-1 !text-base font-semibold cursor-pointer text-white"
       >
         View More
       </Typography>

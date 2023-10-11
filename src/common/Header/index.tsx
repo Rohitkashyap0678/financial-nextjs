@@ -68,7 +68,7 @@ function Header() {
   }, [])
 
   return (
-    <AppBar position="static" className="bg-black element-shadow sticky top-0">
+    <AppBar position="static" className="bg-[#1F2023] sticky top-0 z-10">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -135,6 +135,7 @@ function Header() {
               {pages.map((page) => (
                 <Button
                   key={page}
+                  className="!text-[15px] !font-semibold"
                   onClick={() => {
                     handleCloseNavMenu()
                     if (page === 'SERVICES') {
@@ -150,7 +151,7 @@ function Header() {
               ))}
               {isMenuOpen && (
                 <Box
-                  className="top-[72px] left-[160px] !z-50 absolute"
+                  className="top-[53px] left-[160px] !z-50 absolute"
                   ref={dropdownRef}
                 >
                   {' '}
@@ -159,7 +160,7 @@ function Header() {
               )}
               {isFilterDropdownOpen && (
                 <Box
-                  className="top-[72px] left-[280px] z-20 absolute"
+                  className="top-[53px] left-[280px] z-20 absolute"
                   ref={dropdownRef}
                 >
                   <FilterDropdown subItemsTools={subItemsTools} />{' '}
@@ -170,7 +171,10 @@ function Header() {
             </Box>
 
             <Box className="items-center flex-grow-0 hidden xs:flex md:flex">
-              <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+              <Button
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                className="!text-[15px] !font-semibold"
+              >
                 $1.67 TOKEN
               </Button>
             </Box>
@@ -178,7 +182,7 @@ function Header() {
             <Box className="items-center flex-grow-0 hidden xs:flex md:flex">
               <Button
                 sx={{ my: 2, color: 'white', display: 'flex' }}
-                className="!text-sm typo-sm"
+                className="!text-xs !font-medium rounded-[30px] px-4 !bg-[#151618]"
               >
                 <Typography
                   noWrap
@@ -189,7 +193,10 @@ function Header() {
             </Box>
 
             <Box className="gap-10 items-center">
-              <CustomButton name={'conect'} />
+              <CustomButton
+                classname="!text-[15px] !font-medium"
+                name={'conect'}
+              />
             </Box>
           </Box>
         </Toolbar>

@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const EmptyGridBox = () => {
   return (
-    <Container maxWidth="xl" className="p-6">
+    <Container maxWidth="xl" className="py-6 px-0">
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container

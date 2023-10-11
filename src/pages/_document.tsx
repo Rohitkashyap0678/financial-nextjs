@@ -1,4 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+// import Footer from '../Footer/Footer'
+// import { Header } from '../common'
 
 export default function Document() {
   return (
@@ -10,8 +12,10 @@ export default function Document() {
         />
       </Head>
       <body>
+        {/* <Header /> */}
         <Main />
         <NextScript />
+        {/* <Footer /> */}
       </body>
     </Html>
   )

@@ -5,6 +5,7 @@ import NewestFarms from '../NewestFarms'
 import Container from '@mui/material/Container'
 
 import NewTokensFarms from '../NewTokensFarms'
+import Footer from '../../Footer/Footer'
 
 const Home = () => {
   // Define an array of components to render conditionally
@@ -21,6 +22,7 @@ const Home = () => {
         {/* Use the map function to render components */}
         {componentsToRender.map((component) => component)}
       </Container>
+      <Footer />
     </div>
   )
 }

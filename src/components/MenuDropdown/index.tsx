@@ -16,7 +16,11 @@ const MenuDropdown = () => {
     'Create Nift Pool',
   ]
 
-  const subItemsAssets = ['Assets Generator', 'All Assets', 'Create Assets']
+  const subItemsAssets = [
+    { text: 'Assets Generator', url: '/assetsgenerator' },
+    { text: 'All Assets', url: '/allassets' },
+    { text: 'Create Assets', url: '/createasset' },
+  ]
 
   const subItemsTools = [
     'Sass Tools:',
@@ -27,37 +31,43 @@ const MenuDropdown = () => {
   ]
 
   return (
-    <div className="bg-black  min-w-[300px] relative !z-50 ">
-      <Box className="border-spacing-1 border-white  rounded-2xl border-2 opacity-90">
-        <Box className="flex gap-2 items-center px-3 py-2 border-b">
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            className="md:mr-2 mr-0 flex bg-white rounded-full md:w-8 md:h-8 h-4 w-4"
-          ></Typography>
-          Homepage
-        </Box>
+    <div className="bg-black   min-w-[300px] relative !z-50 ">
+      <Box className="border-spacing-1 border-[#48494D]  rounded-[30px] border-2 opacity-90">
+        <Link href="/" passHref>
+          <Box className="flex ml-2 cursor-pointer gap-2 !text-xs !font-semibold items-center px-3 pt-2 pb-1 border-b border-[#48494D]">
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              className="md:mr-2 mr-0 flex bg-white rounded-full w-[26px] h-[26px] "
+            ></Typography>
+            Homepage
+          </Box>
+        </Link>
 
-        <Box className="flex gap-2 items-baseline px-3 py-2 border-b">
+        <Box className="flex gap-2 ml-2 items-baseline !text-xs !font-semibold px-3 !py-0 border-b border-[#48494D]">
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
-            className="mr-2 flex bg-white rounded-full relative top-3 md:w-10 md:h-8 h-4 w-4"
+            className="mr-2 flex bg-white rounded-full  relative top-3 !min-w-[26px] h-[26px] "
           ></Typography>
 
           <Box sx={{ width: '100%' }}>
-            <List component="nav" aria-label="secondary mailbox folder">
+            <List component="nav" aria-label="secondary !py-0 mailbox folder">
               {subItems.map((item, index) => (
                 <Link
                   key={index}
+                  passHref
                   href={item === 'Yield Farms' ? '/farm' : '/createasset'}
                 >
-                  <ListItemButton className="!p-0">
-                    <ListItemText primary={item} />
+                  <ListItemButton className="!p-0 !text-xs !font-semibold">
+                    <ListItemText
+                      className="!m-0 !text-xs !font-semibold list-item-text"
+                      primary={item}
+                    />
                   </ListItemButton>
                 </Link>
               ))}
@@ -65,43 +75,62 @@ const MenuDropdown = () => {
           </Box>
         </Box>
 
-        <Box className="border-b flex gap-2 items-baseline px-3 py-2 ">
+        <Box className="border-b ml-2 border-[#48494D] flex gap-2 items-baseline !text-xs !font-semibold px-3 !pt-0 pb-1">
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
-            className="mr-2 flex bg-white rounded-full relative top-3 md:w-10 md:h-8 h-4 w-4"
+            className="mr-2 flex bg-white rounded-full relative top-3 !min-w-[26px] h-[26px] "
           ></Typography>
 
-          <Box sx={{ width: '100%' }}>
-            <List component="nav" aria-label="secondary mailbox folder">
+          <Box sx={{ width: '100%' }} className="!text-xs !font-semibold">
+            <List
+              component="nav"
+              className="!text-xs !py-0  !font-semibold"
+              aria-label="secondary mailbox folder"
+            >
               {subItemsAssets.map((item, index) => (
-                <ListItemButton key={index} className="!p-0">
-                  <ListItemText primary={item} />
+                <ListItemButton
+                  key={index}
+                  className="!p-0 !text-xs !font-semibold"
+                >
+                  <Link passHref href={item.url}>
+                    <ListItemText
+                      className="!m-0 !text-xs !font-semibold list-item-text"
+                      primary={item.text} // Use item.text, not item
+                    />
+                  </Link>
                 </ListItemButton>
               ))}
             </List>
           </Box>
         </Box>
 
-        <Box className="flex gap-2 items-center px-3 py-2 border-b">
+        <Box className="flex gap-2 ml-2 items-center px-3 !text-xs !font-semibold py-1 border-b border-[#48494D]">
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
-            className="md:mr-2 mr-0 flex bg-white rounded-full md:w-8 md:h-8 h-4 w-4"
+            className="md:mr-2 mr-0 flex bg-white rounded-full w-[26px] h-[26px] "
           ></Typography>
           Audits
         </Box>
 
-        <Box className=" flex gap-2 items-baseline px-3 py-2 ">
-          <Box sx={{ width: '100%' }} className="pl-5">
-            <List component="nav" aria-label="secondary mailbox folder">
+        <Box className=" flex gap-2 ml-2 items-baseline px-3 pt-2 pb-2 ">
+          <Box sx={{ width: '100%' }} className="pl-1">
+            <List
+              component="nav"
+              className="!py-0 "
+              aria-label="secondary mailbox folder"
+            >
               {subItemsTools.map((item, index) => (
                 <ListItemButton key={index} className="!p-0">
-                  <ListItemText primary={item} />
+                  <ListItemText
+                    className="!m-0 list-item-text"
+                    primary={item}
+                  />
                 </ListItemButton>
               ))}
             </List>

@@ -15,9 +15,12 @@ import ThirdChain from '../../components/Createassetdata/ThirdChain'
 import FourthChain from '../../components/Createassetdata/FourthChain'
 import FifthChain from '../../components/Createassetdata/FifthChain'
 import SxithChain from '../../components/Createassetdata/SxithChain'
+import { Header } from '../../common'
+import Footer from '../../Footer/Footer'
 export default function index() {
   return (
     <Box>
+      <Header />
       <Container maxWidth="xl">
         <EmptyGridBox />
         <HeaderText headerName="CREATE YOUR TOKEN" />
@@ -25,7 +28,7 @@ export default function index() {
           Select Chain:
         </Typography>
         <TableContainer
-          sx={{ height: '495px', background: '#1F2023', padding: '16px' }}
+          sx={{ background: '#1F2023', padding: '16px' }}
           component={Paper}
         >
           <FirstChain />
@@ -41,6 +44,7 @@ export default function index() {
           <SxithChain />
         </TableContainer>
       </Container>
+      <Footer />
     </Box>
   )
 }
