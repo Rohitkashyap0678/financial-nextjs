@@ -2,8 +2,8 @@
 import { Typography, Box, Container } from '@mui/material'
 import React from 'react'
 import TelegramIcon from '@mui/icons-material/Telegram'
-import EmailImage from '../img/mail.png'
-import Twitter from '../img/twitter.png'
+import EmailImage from '../../img/mail.png'
+import Twitter from '../../img/twitter.png'
 
 const Footer: React.FC = () => {
   return (
@@ -15,7 +15,6 @@ const Footer: React.FC = () => {
             className="typo-sm"
             variant="body2"
             textAlign={'right'}
-            color="white"
           >
             Development Email: info@cakefinance.com
           </Typography>
@@ -24,7 +23,6 @@ const Footer: React.FC = () => {
             className="typo-sm"
             variant="body2"
             textAlign={'right'}
-            color="white"
           >
             $CAKE Token
           </Typography>
@@ -33,7 +31,6 @@ const Footer: React.FC = () => {
             className="typo-sm"
             variant="body2"
             textAlign={'right'}
-            color="white"
           >
             General Statement
           </Typography>
@@ -42,7 +39,6 @@ const Footer: React.FC = () => {
             className="typo-sm flex gap-3 items-center"
             variant="body2"
             textAlign={'right'}
-            color="white"
           >
             © CAKEFinance.com 2020-2023
             <Box className="flex gap-1 relative bottom-[2px]">
