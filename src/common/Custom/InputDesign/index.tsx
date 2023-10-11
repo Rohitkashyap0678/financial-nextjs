@@ -14,7 +14,7 @@ function InputDesign({ placeholder, name }: MyComponentProps) {
       <Typography py={1} textTransform={'uppercase'} className="typo-md">
         <CustomInfo /> {name}
       </Typography>
-      <input placeholder={placeholder} className="custom-input" />
+      <input placeholder={placeholder} className="custom-input !text-white" />
     </Box>
   )
 }

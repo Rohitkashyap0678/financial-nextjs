@@ -19,7 +19,7 @@ const MenuDropdown = () => {
   const subItemsAssets = [
     { text: 'Assets Generator', url: '/assetsgenerator' },
     { text: 'All Assets', url: '/allassets' },
-    { text: 'Create Assets', url: '/createasset' },
+    { text: 'Create Assets', url: '/CreatedAssets' },
   ]
 
   const subItemsTools = [
@@ -31,7 +31,7 @@ const MenuDropdown = () => {
   ]
 
   return (
-    <div className="bg-black   min-w-[300px] relative !z-50 ">
+    <div className="bg-black   min-w-[300px] relative rounded-[30px]  !z-50 ">
       <Box className="border-spacing-1 border-[#48494D]  rounded-[30px] border-2 opacity-90">
         <Link href="/" passHref>
           <Box className="flex ml-2 cursor-pointer gap-2 !text-xs !font-semibold items-center px-3 pt-2 pb-1 border-b border-[#48494D]">
@@ -61,7 +61,9 @@ const MenuDropdown = () => {
                 <Link
                   key={index}
                   passHref
-                  href={item === 'Yield Farms' ? '/farm' : '/createasset'}
+                  href={
+                    item === 'Yield Farms' ? '/Yield-Farms' : '/CreatedAssets'
+                  }
                 >
                   <ListItemButton className="!p-0 !text-xs !font-semibold">
                     <ListItemText
