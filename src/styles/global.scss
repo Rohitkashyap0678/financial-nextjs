@@ -67,6 +67,10 @@ body {
   font-size: 20px !important;
 }
 
+.light-dark {
+  color: var(--light-dark);
+}
+
 .vector-color {
   color: var(--light-dark) !important;
   background: var(--light-dark) !important;
@@ -90,6 +94,7 @@ body {
 
   // width: 88px;
   // height: 33px;
+
   width: 100%;
   color: var(--white);
   background: var(--darkest-color);
