@@ -16,7 +16,11 @@ const MenuDropdown = () => {
     'Create Nift Pool',
   ]
 
-  const subItemsAssets = ['Assets Generator', 'All Assets', 'Create Assets']
+  const subItemsAssets = [
+    { text: 'Assets Generator', url: '/assetsgenerator' },
+    { text: 'All Assets', url: '/allassets' },
+    { text: 'Create Assets', url: '/createasset' },
+  ]
 
   const subItemsTools = [
     'Sass Tools:',
@@ -91,10 +95,12 @@ const MenuDropdown = () => {
                   key={index}
                   className="!p-0 !text-xs !font-semibold"
                 >
-                  <ListItemText
-                    className="!m-0 !text-xs !font-semibold list-item-text"
-                    primary={item}
-                  />
+                  <Link passHref href={item.url}>
+                    <ListItemText
+                      className="!m-0 !text-xs !font-semibold list-item-text"
+                      primary={item.text} // Use item.text, not item
+                    />
+                  </Link>
                 </ListItemButton>
               ))}
             </List>

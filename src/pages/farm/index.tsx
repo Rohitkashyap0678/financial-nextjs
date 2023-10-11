@@ -5,6 +5,7 @@ import EmptyGridBox from '../../common/EmptyGridBox'
 import YieldData from '../../components/YieldData'
 import Header from '../../common/Header'
 import FilterBy from '../../components/FilterBy'
+import Footer from '../../Footer/Footer'
 export default function index() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function index() {
           <YieldData />
         </div>
       </Container>
+      <Footer />
     </div>
   )
 }

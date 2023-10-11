@@ -153,7 +153,6 @@ export default function YieldData() {
     <>
       <Container maxWidth="xl">
         <TableContainer
-          className="!p-4"
           sx={{ height: '800px', background: '#1F2023' }}
           component={Paper}
         >

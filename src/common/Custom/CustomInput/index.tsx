@@ -1,13 +1,13 @@
-import React from 'react'
+import Box from '@mui/material/Box'
 interface MyComponentProps {
   placeholder?: string
 }
 
 function CustonInput({ placeholder }: MyComponentProps) {
   return (
-    <div>
+    <Box py={1}>
       <input placeholder={placeholder} className="custom-input" />
-    </div>
+    </Box>
   )
 }
 
