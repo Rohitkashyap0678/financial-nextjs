@@ -7,7 +7,7 @@ export default function SecoundChain() {
   return (
     <div>
       <Box py={2}>
-        <Grid container spacing={2}>
+        <Grid container spacing={6}>
           {/* Grid Item 1 */}
           <Grid item xs={12} sm={6} md={3}>
             <InputDesign
