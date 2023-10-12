@@ -1,7 +1,11 @@
 import { Box, Typography } from '@mui/material'
+import { Header } from '../common'
+import Footer from '../components/Footer/Footer'
+
 export default function index() {
   return (
     <div>
+      <Header />
       <Box
         sx={{
           display: 'flex',
@@ -9,7 +13,7 @@ export default function index() {
           alignItems: 'center',
           flexDirection: 'column',
           width: '100%',
-          height: '100vh',
+          height: '75vh',
         }}
       >
         <Box
@@ -87,12 +91,9 @@ export default function index() {
         </Box>
         <Box></Box>
       </Box>
+      <Box className="mt-10">
+        <Footer />
+      </Box>
     </div>
   )
-}
-
-{
-  /* <style>
-  @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
-</style> */
 }
