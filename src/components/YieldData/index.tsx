@@ -37,10 +37,10 @@ export default function YieldData() {
   const renderTableRow = () => {
     return (
       <TableRow>
-        <TableCell className="!p-3">
+        <TableCell className="!p-3 border-b border-[#48494D]">
           <EllipseIcon />
         </TableCell>
-        <TableCell className="!p-3" align="right">
+        <TableCell className="!p-3 border-b border-[#48494D]" align="right">
           <Typography noWrap className="typo-md">
             <CustomInfo /> STK | RWD
           </Typography>
@@ -48,20 +48,20 @@ export default function YieldData() {
             TOKE/BNB
           </Typography>
         </TableCell>
-        <TableCell className="!p-3">
+        <TableCell className="!p-3 border-b border-[#48494D]">
           <CustomButton
             classname="inherit"
             onClick={handleClickOpen}
             name="Stake"
           />
         </TableCell>
-        <TableCell className="!p-3 typo-sm">
+        <TableCell className="!p-3 border-b border-[#48494D] typo-sm">
           <Typography noWrap className="text-xs font-semibold">
             My Earned
           </Typography>
           <Typography className="text-xs font-semibold">0</Typography>
         </TableCell>
-        <TableCell className="!p-3 typo-sm">
+        <TableCell className="!p-3 border-b border-[#48494D] typo-sm">
           <Typography className="text-xs font-semibold">Earn</Typography>
           <Typography
             variant="subtitle2"
@@ -74,24 +74,24 @@ export default function YieldData() {
             <CalculateIcon className="w-5 pl-[1px] h-5 text-[--primary-color] opacity-90" />
           </Typography>
         </TableCell>
-        <TableCell className="!p-3 typo-sm">
+        <TableCell className="!p-3 border-b border-[#48494D] typo-sm">
           <Typography noWrap className="text-xs font-semibold">
             Staked Assets
           </Typography>
           <Typography className="text-xs font-semibold">78,000</Typography>
         </TableCell>
 
-        <TableCell className="!p-3 typo-sm">
+        <TableCell className="!p-3 border-b border-[#48494D] typo-sm">
           <Typography noWrap className="text-xs font-semibold">
             Available Rewards
           </Typography>
           <Typography className="text-xs font-semibold">0000</Typography>
         </TableCell>
-        <TableCell className="!p-3 typo-sm">
+        <TableCell className="!p-3 border-b border-[#48494D] typo-sm">
           <Typography className="text-xs font-semibold">Staked</Typography>
           <Typography className="text-xs font-semibold">000</Typography>
         </TableCell>
-        <TableCell className="!p-3 typo-sm ">
+        <TableCell className="!p-3 border-b border-[#48494D] typo-sm ">
           <Typography className="text-xs font-semibold">
             <CustomInfo /> Penalty: 2%
           </Typography>
@@ -102,7 +102,7 @@ export default function YieldData() {
             Start: 10/10/2023 End: 15/10/2023
           </Typography>
         </TableCell>
-        <TableCell className="!p-3">
+        <TableCell className="!p-3 border-b border-[#48494D]">
           <Box
             className="flex gap-[2px] justify-between"
             sx={{
@@ -139,7 +139,7 @@ export default function YieldData() {
           </Box>
         </TableCell>
         <TableCell
-          className="!p-3"
+          className="!p-3 border-b border-[#48494D]"
           sx={{ fontSize: '14px', fontWeight: '700', color: '#fff' }}
         >
           <Typography className="flex gap-1 mb-3 items-center">
