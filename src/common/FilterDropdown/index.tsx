@@ -12,7 +12,7 @@ interface FilterDropdownProps {
 
 const FilterDropdown: React.FC<FilterDropdownProps> = ({ subItemsTools }) => {
   return (
-    <div className="bg-black min-w-[300px]">
+    <div className="bg-black min-w-[300px] rounded-[16px]">
       <Box className="border-[#48494D] rounded-2xl border-2 opacity-90">
         <Box>
           <Box>

@@ -19,9 +19,9 @@ import LanguageIcon from '@mui/icons-material/Language'
 import SearchIcon from '@mui/icons-material/Search'
 import CampaignIcon from '@mui/icons-material/Campaign'
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile'
-import AprCalculatorPopup from '../../common/AprCalculatorPopup'
 import { CustomInfo } from '../../common'
 import Twitter from '../../img/twitter.png'
+import AprCalculatorPopup from '../../common/AprCalculatorPopup'
 
 export default function YieldData() {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
@@ -162,7 +162,7 @@ export default function YieldData() {
 
   return (
     <>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className="!px-5 !py-0 bg-[#1F2023]">
         <TableContainer
           sx={{ height: '800px', background: '#1F2023' }}
           component={Paper}

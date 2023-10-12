@@ -6,6 +6,7 @@ import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import TableView from '../TableView'
+import Link from 'next/link'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1F2023' : '#1F2023',
@@ -41,12 +42,14 @@ const NewestFarms = () => {
           ))}
         </Grid>
       </Box>
-      <Typography
-        variant="h6"
-        className="text-end pr-1 !text-base font-semibold cursor-pointer text-white"
-      >
-        View More
-      </Typography>
+      <Link passHref href="/Yield-Farms">
+        <Typography
+          variant="h6"
+          className="text-end pr-1 !text-base font-semibold cursor-pointer text-white"
+        >
+          View More
+        </Typography>
+      </Link>
     </div>
   )
 }

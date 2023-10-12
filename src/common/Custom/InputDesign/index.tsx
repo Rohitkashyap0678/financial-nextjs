@@ -16,7 +16,7 @@ function InputDesign({ placeholder, name, className }: MyComponentProps) {
         <CustomInfo />
         {name}
       </Typography>
-      <input placeholder={placeholder} className="custom-input" />
+      <input placeholder={placeholder} className="custom-input !text-white" />
     </Box>
   )
 }
