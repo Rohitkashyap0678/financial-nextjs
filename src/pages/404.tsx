@@ -13,7 +13,7 @@ export default function index() {
           alignItems: 'center',
           flexDirection: 'column',
           width: '100%',
-          height: '75vh',
+          height: '78vh',
         }}
       >
         <Box
