@@ -22,10 +22,14 @@ function FirstChain() {
         Common Features Price: 0.1 BNB
       </Typography>
       <Box py={2}>
-        <Grid container spacing={2}>
+        <Grid container spacing={6}>
           {gridData.map((item) => (
             <Grid item xs={12} sm={6} md={3} key={item.id}>
-              <InputDesign placeholder={item.placeholder} name={item.text} />
+              <InputDesign
+                className="uppercase"
+                placeholder={item.placeholder}
+                name={item.text}
+              />
             </Grid>
           ))}
         </Grid>

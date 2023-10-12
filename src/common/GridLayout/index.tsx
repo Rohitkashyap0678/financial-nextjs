@@ -18,7 +18,7 @@ const GridLayout: React.FC<Props> = ({ data }) => {
     <Grid container spacing={1}>
       {data.map((item) => (
         <Grid item xs={4} key={item.id}>
-          <ChainButton name={item.label} />
+          <ChainButton className="typo-sm !" name={item.label} />
         </Grid>
       ))}
     </Grid>

@@ -7,7 +7,7 @@ import InputDesign from '../../common/Custom/InputDesign'
 import CustonInput from '../../common/Custom/CustomInput'
 export default function FifthChain() {
   return (
-    <Box>
+    <Box pt={2}>
       <Typography className="typo-md">Fees On transfers</Typography>
       <FifthChainOne />
       <FifthChainTwo />
@@ -18,18 +18,18 @@ export default function FifthChain() {
 
 function FifthChainOne() {
   const data = [
-    { id: 1, label: 'Item 1' },
-    { id: 2, label: 'Item 2' },
-    { id: 3, label: 'Item 3' },
-    { id: 4, label: 'Item 4' },
-    { id: 5, label: 'Item 5' },
-    { id: 6, label: 'Item 6' },
+    { id: 1, label: 'Transfer' },
+    { id: 2, label: 'buy' },
+    { id: 3, label: 'sell' },
+    { id: 4, label: '1%' },
+    { id: 5, label: '1%' },
+    { id: 6, label: '1%' },
   ]
 
   return (
     <div>
       <Box py={2}>
-        <Grid container spacing={2}>
+        <Grid container spacing={6}>
           {/* Grid Item 1 */}
           <Grid item xs={12} sm={6} md={3}>
             <Typography className="typo-md">
@@ -62,7 +62,7 @@ function FifthChainOne() {
 
           {/* Grid Item 3 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
               Set LP Receiver
               {/* tabuse */}
@@ -77,7 +77,7 @@ function FifthChainOne() {
 
           {/* Grid Item 4 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
               Rewards to Holders Activate it? +0.012BNB
             </Typography>
@@ -97,30 +97,25 @@ function FifthChainOne() {
 
 function FifthChainTwo() {
   const data = [
-    { id: 1, label: 'Item 1' },
-    { id: 2, label: 'Item 2' },
-    { id: 3, label: 'Item 3' },
-    { id: 4, label: 'Item 4' },
-    { id: 5, label: 'Item 5' },
-    { id: 6, label: 'Item 6' },
+    { id: 1, label: 'Transfer' },
+    { id: 2, label: 'buy' },
+    { id: 3, label: 'sell' },
+    { id: 4, label: '1%' },
+    { id: 5, label: '1%' },
+    { id: 6, label: '1%' },
   ]
 
   return (
     <div>
       <Box py={2}>
-        <Grid container spacing={2}>
+        <Grid container spacing={6}>
           {/* Grid Item 1 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
-              Set LP Receiver
+              Set Reward Token
               {/* tabuse */}
-            </Typography>
-            <RadioButton />
-            <Typography className="typo-md" textTransform={'uppercase'}>
-              <CustomInfo />
-              Set LP Address
-              <CustonInput />
+              tabuse
             </Typography>
           </Grid>
 
@@ -128,12 +123,12 @@ function FifthChainTwo() {
           <Grid item xs={12} sm={6} md={3}>
             <Typography className="typo-md">
               <CustomInfo />
-              LP Fee Activate it? +0.12 BNB
+              Wallet Tax #1 Fee Activate?
             </Typography>
             <RadioButton />
             <Typography className="typo-md">
               <CustomInfo />
-              Set LP Fee
+              Wallet Tax Fee #1
             </Typography>
 
             <GridLayout data={data} />
@@ -141,14 +136,14 @@ function FifthChainTwo() {
 
           {/* Grid Item 3 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
-              Rewards to Holders Activate it? +0.012BNB
+              Wallet Tax #2 Fee Activate?
             </Typography>
             <RadioButton />
             <Typography className="typo-md">
               <CustomInfo />
-              Set Reward Fees
+              Wallet Tax Fee #2
             </Typography>
 
             <GridLayout data={data} />
@@ -156,14 +151,14 @@ function FifthChainTwo() {
 
           {/* Grid Item 4 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
-              Rewards to Holders Activate it? +0.012BNB
+              Wallet Tax #3 Fee Activate?
             </Typography>
             <RadioButton />
             <Typography className="typo-md">
               <CustomInfo />
-              Set Reward Fees
+              Wallet Tax Fee #3
             </Typography>
 
             <GridLayout data={data} />
@@ -178,45 +173,43 @@ function FifthChainThree() {
   return (
     <div>
       <Box py={2}>
-        <Grid container spacing={2}>
+        <Grid container spacing={6}>
           {/* Grid Item 1 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography
-              variant="subtitle2"
-              textTransform={'uppercase'}
-              color="white"
-            >
+            <Typography className="typo-md">
               <CustomInfo />
-              Different Supply Recipient +0.01 BNB
+              Set Swap Tokens at Amount
             </Typography>
             {/* width radio button */}
+
             <CustonInput placeholder="input address" />
+
             <CustonInput placeholder="input address" />
           </Grid>
 
           {/* Grid Item 2 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
-              Renounce Ownership Activate? +0.02 ETH
+              Function to disable/enable fees
             </Typography>
             <RadioButton />
           </Grid>
 
           {/* Grid Item 3 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
-              Renounce Ownership Activate? +0.02 ETH
+              Function to exclude/include from rewards
             </Typography>
             <RadioButton />
           </Grid>
 
           {/* Grid Item 4 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
-              Pausable +0.02 ETH
+              Function to exclude/include from rewards
             </Typography>
             <RadioButton />
           </Grid>

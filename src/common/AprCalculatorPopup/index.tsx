@@ -44,7 +44,6 @@ const AprCalculatorPopup: React.FC<AprCalculatorPopupProps> = ({
     },
     {
       Headername: 'Staked For',
-      // s
       placeholder: 'Input Value',
       inputName: ' DAYS',
     },

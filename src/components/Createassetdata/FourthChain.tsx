@@ -6,7 +6,7 @@ function FourthChain() {
   return (
     <div>
       <Box py={2}>
-        <Grid container spacing={2}>
+        <Grid container spacing={6}>
           {/* Grid Item 1 */}
           <Grid item xs={12} sm={6} md={3}>
             <InputDesign
@@ -30,7 +30,7 @@ function FourthChain() {
 
           {/* Grid Item 4 */}
           <Grid item xs={12} sm={6} md={3}>
-            <Typography className="typo-md" textTransform={'uppercase'}>
+            <Typography className="typo-md">
               <CustomInfo />
               BLACKLIST FUNCTION +0.01 BNB
             </Typography>
@@ -38,10 +38,9 @@ function FourthChain() {
           </Grid>
         </Grid>
         <Typography
-          p={1}
+          p={2}
           sx={{ textAlign: 'center', alignItems: 'center' }}
           className="typo-md"
-          textTransform={'uppercase'}
         >
           <CustomInfo />
           NEW SUBTOTAL: 5 BNB
