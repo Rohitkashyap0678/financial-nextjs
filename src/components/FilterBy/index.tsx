@@ -42,22 +42,25 @@ function FilterBy() {
   }
 
   return (
-    <Container maxWidth="xl" className="!px-0">
-      <TableContainer className="contents !px-0">
+    <Container
+      maxWidth="xl"
+      className="!px-0 overflow-hidden overflow-x-scroll"
+    >
+      <TableContainer className="contents !px-0 overflow-hidden">
         <Typography className="typo-md relative top-5">Filter by</Typography>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="!pl-0">
+              <TableCell className="!pl-0 border-b border-[#48494D]">
                 <MaterialTabs tabs={tabs} />
               </TableCell>
 
-              <TableCell>
+              <TableCell className="border-b border-[#48494D]">
                 <Typography className="typo-md !text-sm !font-semibold" noWrap>
                   Stake Fee: 1% &nbsp;&nbsp; Unstake Fee: 2%
                 </Typography>
               </TableCell>
-              <TableCell>
+              <TableCell className="border-b border-[#48494D]">
                 <Typography noWrap className="typo-md !text-sm !font-semibold">
                   <MaterialSwitch
                     defaultChecked
@@ -67,7 +70,7 @@ function FilterBy() {
                 </Typography>
               </TableCell>
 
-              <TableCell>
+              <TableCell className="border-b border-[#48494D]">
                 <Typography
                   noWrap
                   className="typo-md mb-1 !text-sm !font-semibold"
@@ -107,7 +110,7 @@ function FilterBy() {
                   )}
                 </Box>
               </TableCell>
-              <TableCell>
+              <TableCell className="border-b border-[#48494D]">
                 <Typography className="typo-md !text-sm !font-semibold mb-1">
                   SEARCH
                 </Typography>
@@ -119,7 +122,7 @@ function FilterBy() {
                   />
                 </Box>
               </TableCell>
-              <TableCell>
+              <TableCell className="border-b border-[#48494D]">
                 <Typography noWrap className="typo-md !text-sm !font-semibold">
                   <CustomInfo /> Earn Revenue With
                   <br /> token Assets
