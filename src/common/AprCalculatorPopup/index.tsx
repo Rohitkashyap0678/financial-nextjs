@@ -9,6 +9,13 @@ import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import Typography from '@mui/material/Typography'
 import { CustomButton } from '../Custom/CustomButton'
+import CustomInfo from '../Custom/CustomInfo'
+import FormsInputTkd from '../../forms/FormsInputTkd'
+
+interface AprCalculatorPopupProps {
+  open: boolean // Add a type annotation for the 'open' prop
+  handleClose: () => void
+}
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -25,7 +32,28 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }))
 
-const AprCalculatorPopup = ({ open, handleClose }) => {
+const AprCalculatorPopup: React.FC<AprCalculatorPopupProps> = ({
+  open,
+  handleClose,
+}) => {
+  const formInputs = [
+    {
+      Headername: 'Deposit Amount',
+      placeholder: 'Input Value',
+      inputName: 'STK',
+    },
+    {
+      Headername: 'Staked For',
+      placeholder: 'Input Value',
+      inputName: ' DAYS',
+    },
+    {
+      Headername: 'Rewards',
+      placeholder: 'Input Value',
+      inputName: ' RWD',
+    },
+  ]
+
   return (
     <div>
       <BootstrapDialog
@@ -54,26 +82,30 @@ const AprCalculatorPopup = ({ open, handleClose }) => {
           <CloseIcon />
         </IconButton>
         <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+          <Box component="div">
+            <Typography className="typo-md flex gap-1 items-center">
+              <CustomInfo />
+              IPD: 100%
+            </Typography>
+            <Box
+              className="grid md:grid-cols-2 mt-5 grid-cols-1"
+              style={{ gap: '30px 60px' }}
+            >
+              {formInputs.map((input, index) => (
+                <FormsInputTkd
+                  key={index}
+                  Headername={input.Headername}
+                  placeholder={input.placeholder}
+                  inputName={input.inputName}
+                />
+              ))}
+            </Box>
+          </Box>
         </DialogContent>
         <DialogActions>
           <Box
-            autoFocus
-            className="justify-center mb-4 flex w-full"
+            component="div"
+            className="justify-center mb-4 mt-6 flex w-full"
             onClick={handleClose}
           >
             <CustomButton
