@@ -4,7 +4,7 @@ interface MyComponentProps {
   className?: string
 }
 
-function CustonInput({ placeholder, className }: MyComponentProps) {
+function CustomInput({ placeholder, className }: MyComponentProps) {
   return (
     <Box py={1}>
       <input
@@ -15,4 +15,4 @@ function CustonInput({ placeholder, className }: MyComponentProps) {
   )
 }
 
-export default CustonInput
+export default CustomInput

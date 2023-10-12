@@ -9,16 +9,13 @@ import CustomInfo from '../../common/Custom/CustomInfo'
 import Container from '@mui/material/Container'
 import React, { useState } from 'react'
 import GrayButton from '../../common/Custom/CustomButton/GrayButton'
-import MaterialTabs from '../../common/MaterialTabs'
-import MaterialSwitch from '../../common/MaterialSwitch'
 
 import List from '@mui/material/List'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
-// import MySearch from '../../common/Custom/MySearch'
-import MaterialSearchBar from '../../common/MaterialSearchBar'
+import MySearch from '../../common/Custom/MySearch'
 
-function FilterBy() {
+function TopTable() {
   const subItemsTools = [
     'Alphabetical order',
     'Sponsored',
@@ -30,11 +27,11 @@ function FilterBy() {
     'Verified',
     'Risky',
   ]
-  const tabs = [
-    { value: 'one', label: 'Live' },
-    { value: 'two', label: 'Upcoming' },
-    { value: 'three', label: 'Finished' },
-  ]
+  // const tabs = [
+  //   { value: 'one', label: 'Live' },
+  //   { value: 'two', label: 'Upcoming' },
+  //   { value: 'three', label: 'Finished' },
+  // ]
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
@@ -43,35 +40,17 @@ function FilterBy() {
   }
 
   return (
-    <Container
-      maxWidth="xl"
-      className="!px-0 overflow-hidden overflow-x-scroll"
-    >
-      <TableContainer className="contents !px-0 overflow-hidden">
-        <Typography className="typo-md relative top-5">Filter by</Typography>
+    <Container maxWidth="xl" className="!px-0">
+      <TableContainer className="contents !px-0">
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="!pl-0 border-b border-[#48494D]">
-                <MaterialTabs tabs={tabs} />
-              </TableCell>
+              <TableCell className="!pl-0"></TableCell>
 
-              <TableCell className="border-b border-[#48494D]">
-                <Typography className="typo-md !text-sm !font-semibold" noWrap>
-                  Stake Fee: 1% &nbsp;&nbsp; Unstake Fee: 2%
-                </Typography>
-              </TableCell>
-              <TableCell className="border-b border-[#48494D]">
-                <Typography noWrap className="typo-md !text-sm !font-semibold">
-                  <MaterialSwitch
-                    defaultChecked
-                    className=" !text-sm !font-semibold"
-                    label="Staked only"
-                  />
-                </Typography>
-              </TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
 
-              <TableCell className="border-b border-[#48494D]">
+              <TableCell>
                 <Typography
                   noWrap
                   className="typo-md mb-1 !text-sm !font-semibold"
@@ -111,23 +90,10 @@ function FilterBy() {
                   )}
                 </Box>
               </TableCell>
-
-              {/* <TableCell>
-                <MySearch defaultValue="Search Farm" /> */}
-
-              <TableCell className="border-b border-[#48494D]">
-                <Typography className="typo-md !text-sm !font-semibold mb-1">
-                  SEARCH
-                </Typography>
-                <Box sx={{ width: '236px' }}>
-                  {/* <GrayButton className='!text-left block !text-sm !font-semibold' name="search farms" /> */}
-                  <MaterialSearchBar
-                    className="!text-left !text-white block !text-sm !font-semibold"
-                    defaultValue="Search Farms"
-                  />
-                </Box>
+              <TableCell>
+                <MySearch defaultValue="Search Farm" />
               </TableCell>
-              <TableCell className="border-b border-[#48494D]">
+              <TableCell>
                 <Typography noWrap className="typo-md !text-sm !font-semibold">
                   <CustomInfo /> Earn Revenue With
                   <br /> token Assets
@@ -141,4 +107,4 @@ function FilterBy() {
   )
 }
 
-export default FilterBy
+export default TopTable

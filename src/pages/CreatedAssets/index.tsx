@@ -19,6 +19,7 @@ import { Header } from '../../common'
 import Footer from '../../components/Footer/Footer'
 import SeventhChain from '../../components/Createassetdata/SeventhChain'
 import EightChain from '../../components/Createassetdata/EightChain'
+import NinthChain from '../../components/Createassetdata/NinthChain'
 export default function index() {
   return (
     <Box>
@@ -48,6 +49,8 @@ export default function index() {
           <SeventhChain />
           <Divider className="vector-color" />
           <EightChain />
+          <Divider className="vector-color" />
+          <NinthChain />
         </TableContainer>
       </Container>
       <Footer />
