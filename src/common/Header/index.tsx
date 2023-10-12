@@ -195,7 +195,7 @@ function Header() {
             <Box className="gap-10 items-center">
               <CustomButton
                 classname="!text-[15px] !font-medium"
-                name={'conect'}
+                name={'connect'}
               />
             </Box>
           </Box>

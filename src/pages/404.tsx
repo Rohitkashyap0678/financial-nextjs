@@ -1,24 +1,98 @@
-import React from 'react'
-
-export default function NotFoundPage() {
+import { Box, Typography } from '@mui/material'
+export default function index() {
   return (
-    <div className="flex flex-col">
-      <header className="flex w-[321px] max-w-full grow flex-col mt-24 px-5">
-        <nav className="flex w-[312px] max-w-full items-start justify-between gap-5 max-md:justify-center">
-          <div className="bg-green-500 self-center flex w-[90px] h-1.5 flex-col my-auto" />
-          <h1 className="text-green-500 text-3xl uppercase self-center my-auto">
-            SORRY <br />
-          </h1>
-          <div className="bg-green-500 self-center flex w-[90px] h-1.5 flex-col my-auto" />
-        </nav>
-        <h2 className="text-green-500 text-9xl uppercase self-center ml-0 w-[210px] mt-11 max-md:text-4xl">
-          404 <br />
-        </h2>
-        <div className="bg-green-500 self-stretch flex w-full h-1.5 flex-col mt-10" />
-        <p className="text-green-500 text-3xl uppercase self-center max-w-[326px] -ml-1.5 mt-5">
-          SORRY PAGE NOT FOUND <br />
-        </p>
-      </header>
+    <div>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          width: '100%',
+          height: '100vh',
+        }}
+      >
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Box
+            sx={{
+              width: '96px ',
+              background: '#00F904',
+              height: '6px',
+              flexShrink: '0',
+            }}
+          ></Box>
+          <Box>
+            <Typography
+              m={2}
+              style={{
+                color: '#00F902',
+                fontFamily: 'Monomaniac One',
+                fontSize: '30px',
+                fontWeight: '400',
+                textTransform: 'uppercase',
+              }}
+            >
+              sorry
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              width: '96px ',
+              background: '#00F904',
+              height: '6px',
+              flexShrink: '0',
+            }}
+          ></Box>
+        </Box>
+
+        <Box>
+          <Typography
+            sx={{
+              color: '#00F902',
+              fontFamily: 'Monomaniac One',
+              fontSize: '120px',
+              fontWeight: '400',
+              textTransform: 'uppercase',
+            }}
+          >
+            404
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            width: '321px ',
+            background: '#00F904',
+            height: '6px',
+            flexShrink: '0',
+          }}
+        >
+          <Typography
+            mt={2}
+            style={{
+              color: '#00F902',
+              fontFamily: 'Monomaniac One',
+              fontSize: '28px',
+              fontWeight: '400',
+              textTransform: 'uppercase',
+            }}
+          >
+            SORRY PAGE NOT FOUND
+          </Typography>
+        </Box>
+        <Box></Box>
+      </Box>
     </div>
   )
+}
+
+{
+  /* <style>
+  @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+</style> */
 }
